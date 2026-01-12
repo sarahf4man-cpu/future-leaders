@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Leaders | Jacksonville Black Homeschool Enrichment & Community</title>
+  <meta name="description" content="Join Future Leaders Black Homeschoolers Community for enrichment programs, leadership development, field trips, and community events in Jacksonville, FL. Become a member today.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== CSS RESET & BASE ===== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      /* Brand Colors - Pan-African inspired */
+      --color-red: #D42027;
+      --color-red-dark: #B91C22;
+      --color-green: #00843D;
+      --color-green-dark: #006B32;
+      --color-green-light: #e8f5ee;
+      --color-gold: #F7C41F;
+      --color-gold-dark: #D4A80E;
+      --color-gold-light: #fef9e7;
+      --color-black: #1a1a1a;
+
+      /* Semantic Colors */
+      --color-primary: var(--color-green);
+      --color-primary-dark: var(--color-green-dark);
+      --color-primary-light: var(--color-green-light);
+      --color-secondary: var(--color-red);
+      --color-secondary-dark: var(--color-red-dark);
+      --color-accent: var(--color-gold);
+      --color-accent-dark: var(--color-gold-dark);
+      --color-accent-light: var(--color-gold-light);
+
+      --color-text: #1e293b;
+      --color-text-light: #64748b;
+      --color-text-inverse: #ffffff;
+      --color-bg: #ffffff;
+      --color-bg-alt: #f8fafc;
+      --color-bg-dark: var(--color-black);
+      --color-border: #e2e8f0;
+
+      /* Typography */
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-heading: 'Outfit', 'Inter', sans-serif;
+
+      /* Spacing */
+      --space-xs: 0.25rem;
+      --space-sm: 0.5rem;
+      --space-md: 1rem;
+      --space-lg: 1.5rem;
+      --space-xl: 2rem;
+      --space-2xl: 3rem;
+      --space-3xl: 4rem;
+      --space-4xl: 6rem;
+
+      /* Border Radius */
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.75rem;
+      --radius-xl: 1rem;
+      --radius-2xl: 1.5rem;
+      --radius-full: 9999px;
+
+      /* Shadows */
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+      --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+
+      /* Container */
+      --container-max: 1200px;
+      --container-padding: 1.5rem;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--color-text);
+      background-color: var(--color-bg);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== SKIP LINK (Accessibility) ===== */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-primary);
+      color: white;
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--radius-md);
+      z-index: 1000;
+      transition: top 0.2s;
+    }
+
+    .skip-link:focus {
+      top: var(--space-md);
+      text-decoration: none;
+    }
+
+    /* ===== CONTAINER ===== */
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 var(--container-padding);
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+      padding: 0.75rem 1.5rem;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid transparent;
+      border-radius: var(--radius-lg);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .btn:focus {
+      outline: 3px solid var(--color-accent);
+      outline-offset: 2px;
+    }
+
+    .btn-primary {
+      background-color: var(--color-secondary);
+      color: var(--color-text-inverse);
+      border-color: var(--color-secondary);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-secondary-dark);
+      border-color: var(--color-secondary-dark);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--color-primary);
+      color: var(--color-text-inverse);
+    }
+
+    .btn-accent {
+      background-color: var(--color-accent);
+      color: var(--color-black);
+      border-color: var(--color-accent);
+    }
+
+    .btn-accent:hover {
+      background-color: var(--color-accent-dark);
+      border-color: var(--color-accent-dark);
+    }
+
+    .btn-white {
+      background-color: var(--color-bg);
+      color: var(--color-primary);
+      border-color: var(--color-bg);
+    }
+
+    .btn-white:hover {
+      background-color: var(--color-primary-light);
+    }
+
+    .btn-lg {
+      padding: 1rem 2rem;
+      font-size: 1.125rem;
+    }
+
+    .btn-sm {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+    }
+
+    /* ===== ANNOUNCEMENT BAR ===== */
+    .announcement-bar {
+      background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-green-dark) 100%);
+      color: var(--color-text-inverse);
+      padding: var(--space-sm) var(--container-padding);
+      text-align: center;
+      font-size: 0.9375rem;
+    }
+
+    .announcement-bar a {
+      color: var(--color-accent);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .announcement-bar a:hover {
+      color: var(--color-text-inverse);
+    }
+
+    /* ===== HEADER / NAV ===== */
+    .header {
+      background-color: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-md) 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      text-decoration: none;
+    }
+
+    .logo:hover {
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 56px;
+      width: auto;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .logo-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--color-black);
+    }
+
+    .logo-subtitle {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--color-text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-desktop {
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+      .nav-desktop {
+        display: flex;
+        align-items: center;
+        gap: var(--space-xl);
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--color-text);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    .nav-cta {
+      display: flex;
+      gap: var(--space-sm);
+    }
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: var(--space-sm);
+    }
+
+    .menu-toggle span {
+      width: 24px;
+      height: 2px;
+      background-color: var(--color-text);
+      border-radius: 2px;
+    }
+
+    @media (min-width: 1024px) {
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    /* Mobile Nav */
+    .nav-mobile {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .nav-mobile.active {
+      display: block;
+    }
+
+    .nav-mobile ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+
+    .nav-mobile a {
+      display: block;
+      padding: var(--space-sm) 0;
+      color: var(--color-text);
+      font-weight: 500;
+    }
+
+    .nav-mobile .nav-cta {
+      margin-top: var(--space-lg);
+      flex-direction: column;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent-light) 100%);
+      padding: var(--space-4xl) 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 60%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(212, 32, 39, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      display: grid;
+      gap: var(--space-2xl);
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .hero-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-3xl);
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--color-text);
+      margin-bottom: var(--space-lg);
+    }
+
+    .hero h1 .highlight-green {
+      color: var(--color-primary);
+    }
+
+    .hero h1 .highlight-red {
+      color: var(--color-secondary);
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--color-text-light);
+      margin-bottom: var(--space-xl);
+      max-width: 540px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+    }
+
+    .hero-image {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius-2xl);
+      box-shadow: var(--shadow-xl);
+      object-fit: cover;
+      aspect-ratio: 16/10;
+    }
+
+    /* ===== SOCIAL PROOF BAR ===== */
+    .social-proof {
+      background-color: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      padding: var(--space-xl) 0;
+    }
+
+    .social-proof-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--space-xl);
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .social-proof-inner {
+        gap: var(--space-3xl);
+      }
+    }
+
+    .proof-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .proof-number {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    .proof-label {
+      font-size: 0.9375rem;
+      color: var(--color-text-light);
+    }
+
+    /* ===== SECTION STYLES ===== */
+    .section {
+      padding: var(--space-4xl) 0;
+    }
+
+    .section-alt {
+      background-color: var(--color-bg-alt);
+    }
+
+    .section-dark {
+      background-color: var(--color-bg-dark);
+      color: var(--color-text-inverse);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: var(--space-3xl);
+    }
+
+    .section-header h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: var(--space-md);
+    }
+
+    .section-dark .section-header h2 {
+      color: var(--color-text-inverse);
+    }
+
+    .section-header p {
+      font-size: 1.125rem;
+      color: var(--color-text-light);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .section-dark .section-header p {
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* ===== VALUE PROPS ===== */
+    .value-grid {
+      display: grid;
+      gap: var(--space-xl);
+    }
+
+    @media (min-width: 768px) {
+      .value-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .value-card {
+      background: var(--color-bg);
+      padding: var(--space-xl);
+      border-radius: var(--radius-xl);
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.2s, box-shadow 0.2s;
+      border-top: 4px solid var(--color-primary);
+    }
+
+    .value-card:nth-child(2) {
+      border-top-color: var(--color-secondary);
+    }
+
+    .value-card:nth-child(3) {
+      border-top-color: var(--color-accent);
+    }
+
+    .value-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .value-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto var(--space-lg);
+      background: var(--color-primary-light);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+
+    .value-card:nth-child(2) .value-icon {
+      background: #fde8e8;
+    }
+
+    .value-card:nth-child(3) .value-icon {
+      background: var(--color-accent-light);
+    }
+
+    .value-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+    }
+
+    .value-card p {
+      color: var(--color-text-light);
+      font-size: 0.9375rem;
+    }
+
+    /* ===== OUR VALUES SECTION ===== */
+    .values-section {
+      background: linear-gradient(135deg, var(--color-black) 0%, #2d2d2d 100%);
+      color: white;
+    }
+
+    .values-grid {
+      display: grid;
+      gap: var(--space-lg);
+    }
+
+    @media (min-width: 768px) {
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .values-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .values-card {
+      background: rgba(255,255,255,0.05);
+      padding: var(--space-xl);
+      border-radius: var(--radius-xl);
+      border-left: 4px solid var(--color-accent);
+      transition: background 0.2s;
+    }
+
+    .values-card:hover {
+      background: rgba(255,255,255,0.08);
+    }
+
+    .values-card:nth-child(2) {
+      border-left-color: var(--color-secondary);
+    }
+
+    .values-card:nth-child(3) {
+      border-left-color: var(--color-primary);
+    }
+
+    .values-card:nth-child(4) {
+      border-left-color: var(--color-secondary);
+    }
+
+    .values-card:nth-child(5) {
+      border-left-color: var(--color-primary);
+    }
+
+    .values-card:nth-child(6) {
+      border-left-color: var(--color-accent);
+    }
+
+    .values-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+      color: var(--color-accent);
+    }
+
+    .values-card:nth-child(2) h3,
+    .values-card:nth-child(4) h3 {
+      color: var(--color-secondary);
+    }
+
+    .values-card:nth-child(3) h3,
+    .values-card:nth-child(5) h3 {
+      color: var(--color-primary);
+    }
+
+    .values-card:nth-child(6) h3 {
+      color: var(--color-accent);
+    }
+
+    .values-card p {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.9375rem;
+      line-height: 1.7;
+    }
+
+    /* ===== PROGRAMS SECTION ===== */
+    .programs-grid {
+      display: grid;
+      gap: var(--space-lg);
+    }
+
+    @media (min-width: 640px) {
+      .programs-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .programs-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .program-card {
+      background: var(--color-bg);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .program-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .program-image {
+      aspect-ratio: 16/10;
+      overflow: hidden;
+    }
+
+    .program-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .program-card:hover .program-image img {
+      transform: scale(1.05);
+    }
+
+    .program-content {
+      padding: var(--space-lg);
+    }
+
+    .program-tag {
+      display: inline-block;
+      background: var(--color-primary-light);
+      color: var(--color-primary);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.625rem;
+      border-radius: var(--radius-full);
+      margin-bottom: var(--space-sm);
+    }
+
+    .program-tag-red {
+      background: #fde8e8;
+      color: var(--color-secondary);
+    }
+
+    .program-tag-gold {
+      background: var(--color-accent-light);
+      color: #92400e;
+    }
+
+    .program-card h3 {
+      font-size: 1.0625rem;
+      font-weight: 600;
+      margin-bottom: var(--space-xs);
+    }
+
+    .program-meta {
+      font-size: 0.875rem;
+      color: var(--color-text-light);
+      margin-bottom: var(--space-md);
+    }
+
+    .program-card .btn {
+      width: 100%;
+    }
+
+    .section-cta {
+      text-align: center;
+      margin-top: var(--space-2xl);
+    }
+
+    /* ===== HOW IT WORKS ===== */
+    .steps-grid {
+      display: grid;
+      gap: var(--space-xl);
+    }
+
+    @media (min-width: 768px) {
+      .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .step-card {
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto var(--space-lg);
+      background: var(--color-secondary);
+      color: white;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .step-card:nth-child(2) .step-number {
+      background: var(--color-primary);
+    }
+
+    .step-card:nth-child(3) .step-number {
+      background: var(--color-accent);
+      color: var(--color-black);
+    }
+
+    .step-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+    }
+
+    .step-card p {
+      color: var(--color-text-light);
+      font-size: 0.9375rem;
+    }
+
+    /* ===== EVENTS SECTION ===== */
+    .events-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    .event-card {
+      display: flex;
+      gap: var(--space-lg);
+      background: var(--color-bg);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .event-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .event-image {
+      flex-shrink: 0;
+      width: 200px;
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .event-image {
+        display: block;
+      }
+    }
+
+    .event-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .event-body {
+      display: flex;
+      flex: 1;
+      gap: var(--space-lg);
+      padding: var(--space-lg);
+    }
+
+    .event-date {
+      flex-shrink: 0;
+      width: 70px;
+      text-align: center;
+      padding: var(--space-md);
+      background: var(--color-primary-light);
+      border-radius: var(--radius-lg);
+      align-self: flex-start;
+    }
+
+    .event-date-month {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .event-date-day {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--color-text);
+      line-height: 1;
+    }
+
+    .event-date-dow {
+      font-size: 0.75rem;
+      color: var(--color-text-light);
+    }
+
+    .event-details {
+      flex: 1;
+    }
+
+    .event-tag {
+      display: inline-block;
+      background: var(--color-accent-light);
+      color: #92400e;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.625rem;
+      border-radius: var(--radius-full);
+      margin-bottom: var(--space-xs);
+    }
+
+    .event-details h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: var(--space-xs);
+    }
+
+    .event-description {
+      font-size: 0.9375rem;
+      color: var(--color-text-light);
+      margin-bottom: var(--space-sm);
+    }
+
+    .event-meta {
+      font-size: 0.875rem;
+      color: var(--color-text-light);
+    }
+
+    .event-actions {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+      justify-content: center;
+    }
+
+    @media (max-width: 640px) {
+      .event-body {
+        flex-direction: column;
+      }
+
+      .event-date {
+        width: 100%;
+        display: flex;
+        gap: var(--space-sm);
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .event-actions {
+        flex-direction: row;
+      }
+    }
+
+    /* ===== TESTIMONIAL ===== */
+    .testimonial-section {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-green-dark) 100%);
+      color: white;
+      padding: var(--space-4xl) 0;
+    }
+
+    .testimonial-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .testimonial-quote {
+      font-size: clamp(1.25rem, 3vw, 1.5rem);
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: var(--space-xl);
+    }
+
+    .testimonial-quote::before {
+      content: '"';
+      font-size: 4rem;
+      line-height: 0;
+      vertical-align: middle;
+      opacity: 0.3;
+      margin-right: var(--space-sm);
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      font-size: 1.0625rem;
+    }
+
+    .testimonial-role {
+      opacity: 0.8;
+      font-size: 0.9375rem;
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      background: var(--color-bg-alt);
+      padding: var(--space-4xl) 0;
+    }
+
+    .cta-inner {
+      background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-red-dark) 100%);
+      border-radius: var(--radius-2xl);
+      padding: var(--space-3xl);
+      text-align: center;
+      color: white;
+    }
+
+    .cta-inner h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 700;
+      margin-bottom: var(--space-md);
+    }
+
+    .cta-inner p {
+      font-size: 1.125rem;
+      opacity: 0.95;
+      margin-bottom: var(--space-xl);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background-color: var(--color-bg-dark);
+      color: var(--color-text-inverse);
+      padding: var(--space-4xl) 0 var(--space-xl);
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: var(--space-2xl);
+      margin-bottom: var(--space-3xl);
+    }
+
+    @media (min-width: 640px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 2fr;
+      }
+    }
+
+    .footer-brand .logo {
+      margin-bottom: var(--space-md);
+    }
+
+    .footer-brand .logo img {
+      height: 64px;
+    }
+
+    .footer-brand p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9375rem;
+      line-height: 1.7;
+    }
+
+    .footer h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: var(--space-lg);
+      color: var(--color-accent);
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: var(--space-sm);
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9375rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-contact p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-sm);
+    }
+
+    .footer-contact a {
+      color: var(--color-accent);
+    }
+
+    .social-links {
+      display: flex;
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: background 0.2s;
+    }
+
+    .social-link:hover {
+      background: var(--color-primary);
+      text-decoration: none;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: var(--space-sm);
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.1);
+      color: white;
+      font-size: 0.9375rem;
+    }
+
+    .newsletter-form input::placeholder {
+      color: rgba(255,255,255,0.5);
+    }
+
+    .newsletter-form input:focus {
+      outline: 2px solid var(--color-accent);
+      outline-offset: 2px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: var(--space-xl);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: var(--space-md);
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: var(--space-lg);
+    }
+
+    .footer-legal a {
+      color: rgba(255,255,255,0.5);
+    }
+
+    .footer-legal a:hover {
+      color: white;
+    }
+
+    /* ===== UTILITY CLASSES ===== */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ===== RESPONSIVE ADJUSTMENTS ===== */
+    @media (max-width: 640px) {
+      :root {
+        --space-4xl: 3rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero-ctas {
+        flex-direction: column;
+      }
+
+      .hero-ctas .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar" role="banner">
+    Spring Workshops Now Open — Limited spots available.
+    <a href="#programs">Register Today &rarr;</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="Future Leaders Home">
+        <img src="Future Leaders Logo.png" alt="Future Leaders Black Homeschoolers Community logo">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#values">Our Values</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#volunteer">Volunteer</a></li>
+          <li><a href="#donate">Donate</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="https://band.us/n/aba2A5t6c143I" class="btn btn-primary">Join Our Community</a>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Mobile Navigation -->
+      <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#values">Our Values</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#volunteer">Volunteer</a></li>
+          <li><a href="#donate">Donate</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="https://band.us/n/aba2A5t6c143I" class="btn btn-primary">Join Our Community</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1>Where Jacksonville's Black Homeschoolers <span class="highlight-green">Learn</span>, <span class="highlight-red">Lead</span> & <span class="highlight-green">Belong</span></h1>
+          <p class="hero-subtitle">
+            Enrichment programs, leadership workshops, field trips, and community events designed for Black homeschool families who want more for their children.
+          </p>
+          <div class="hero-ctas">
+            <a href="https://band.us/n/aba2A5t6c143I" class="btn btn-primary btn-lg">Join Our Community</a>
+            <a href="#programs" class="btn btn-secondary btn-lg">Explore Programs</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="Future leaders pics/BandPhoto_68990169107.jpg" alt="Future Leaders community gathering with families at a pool event">
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <section class="social-proof" aria-label="Organization statistics">
+      <div class="container social-proof-inner">
+        <div class="proof-item">
+          <span class="proof-number">200+</span>
+          <span class="proof-label">Families Served</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-number">50+</span>
+          <span class="proof-label">Programs Offered</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-number">100+</span>
+          <span class="proof-label">Community Events</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-number">5+</span>
+          <span class="proof-label">Years Serving Jax</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Offer -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <div class="section-header">
+          <h2>What We Offer</h2>
+          <p>Everything your homeschool family needs to thrive — in one welcoming, culturally-affirming community.</p>
+        </div>
+        <div class="value-grid">
+          <article class="value-card">
+            <div class="value-icon" aria-hidden="true">&#128218;</div>
+            <h3>Hands-On Learning</h3>
+            <p>From STEM to arts to life skills — classes that spark curiosity and build real-world abilities while honoring our children's unique gifts.</p>
+          </article>
+          <article class="value-card">
+            <div class="value-icon" aria-hidden="true">&#127942;</div>
+            <h3>Leadership Development</h3>
+            <p>Public speaking, teamwork, goal-setting, and confidence-building programs that prepare our children to lead with heart.</p>
+          </article>
+          <article class="value-card">
+            <div class="value-icon" aria-hidden="true">&#129309;</div>
+            <h3>Community & Connection</h3>
+            <p>Field trips, socials, and family events where homeschoolers make lifelong friends and parents find their village.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="section values-section" id="values">
+      <div class="container">
+        <div class="section-header">
+          <h2 style="color: white;">Our Values</h2>
+          <p>The principles that guide everything we do.</p>
+        </div>
+        <div class="values-grid">
+          <article class="values-card">
+            <h3>Community & Collective Care</h3>
+            <p>We believe children thrive within a strong, intentional village. Community is the heart of Future Leaders—where families are connected, supported, and rooted in belonging.</p>
+          </article>
+          <article class="values-card">
+            <h3>Honoring Our History & Identity</h3>
+            <p>We celebrate the strength, resilience, and wisdom of our ancestors. By honoring our history and cultural identity, we empower children to walk forward with pride, confidence, and purpose.</p>
+          </article>
+          <article class="values-card">
+            <h3>Intentional Learning</h3>
+            <p>Learning is purposeful and holistic. We nurture curiosity, creativity, and critical thinking while honoring each child's unique gifts and growth.</p>
+          </article>
+          <article class="values-card">
+            <h3>Leadership with Heart</h3>
+            <p>Leadership is grounded in empathy, integrity, and responsibility. We guide children to lead with confidence, compassion, and a commitment to community.</p>
+          </article>
+          <article class="values-card">
+            <h3>Family Partnership</h3>
+            <p>Families are essential partners in this work. We value collaboration, trust, and shared responsibility in nurturing the next generation of leaders.</p>
+          </article>
+          <article class="values-card">
+            <h3>Growth & Becoming</h3>
+            <p>We honor growth as a journey. Children are encouraged to reflect, evolve, and embrace becoming—knowing they are supported every step of the way.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Programs -->
+    <section class="section" id="programs">
+      <div class="container">
+        <div class="section-header">
+          <h2>Popular Programs</h2>
+          <p>Explore what Jacksonville homeschool families are loving right now.</p>
+        </div>
+        <div class="programs-grid">
+          <article class="program-card">
+            <div class="program-image">
+              <img src="Future leaders pics/20240916_105630.jpg" alt="Story time session with instructor reading to children">
+            </div>
+            <div class="program-content">
+              <span class="program-tag">Enrichment</span>
+              <h3>Story Time & Literacy</h3>
+              <a href="#" class="btn btn-secondary btn-sm">Learn More</a>
+            </div>
+          </article>
+          <article class="program-card">
+            <div class="program-image">
+              <img src="Future leaders pics/20240924_105616.jpg" alt="Children learning cooking skills with a chef instructor">
+            </div>
+            <div class="program-content">
+              <span class="program-tag program-tag-red">Life Skills</span>
+              <h3>Junior Chef Academy</h3>
+              <a href="#" class="btn btn-secondary btn-sm">Learn More</a>
+            </div>
+          </article>
+          <article class="program-card">
+            <div class="program-image">
+              <img src="Future leaders pics/IMG_5854.jpg" alt="Students on a museum field trip learning about history">
+            </div>
+            <div class="program-content">
+              <span class="program-tag program-tag-gold">Field Trip</span>
+              <h3>Museum Discovery Day</h3>
+              <a href="#" class="btn btn-secondary btn-sm">Learn More</a>
+            </div>
+          </article>
+          <article class="program-card">
+            <div class="program-image">
+              <img src="Future leaders pics/BandPhoto_68436682611.jpg" alt="Children experiencing an immersive light art installation">
+            </div>
+            <div class="program-content">
+              <span class="program-tag program-tag-gold">Field Trip</span>
+              <h3>WJCT Media Studios (April 2025)</h3>
+              <a href="#" class="btn btn-secondary btn-sm">Learn More</a>
+            </div>
+          </article>
+        </div>
+        <div class="section-cta">
+          <a href="#" class="btn btn-primary">View All Programs &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Getting Started Is Easy</h2>
+          <p>Join our village in three simple steps.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card">
+            <div class="step-number">1</div>
+            <h3>Join the Community</h3>
+            <p>Become a member to unlock priority registration, discounts, and access to our village of families.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">2</div>
+            <h3>Browse & Register</h3>
+            <p>Explore our programs and events. Sign up for the ones that fit your family's journey.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">3</div>
+            <h3>Connect & Grow</h3>
+            <p>Show up, participate, and become part of a supportive community that celebrates your children.</p>
+          </article>
+        </div>
+        <div class="section-cta">
+          <a href="#join" class="btn btn-primary btn-lg">Get Started Today</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="section" id="events">
+      <div class="container">
+        <div class="section-header">
+          <h2>Past Events</h2>
+          <p>A look back at some of our favorite workshops, field trips, and community gatherings.</p>
+        </div>
+        <div class="events-list">
+          <article class="event-card">
+            <div class="event-image">
+              <img src="Future leaders pics/20241101_115001.jpg" alt="Children on a boat tour field trip">
+            </div>
+            <div class="event-body">
+              <div class="event-date">
+                <div class="event-date-month">Mar</div>
+                <div class="event-date-day">15</div>
+                <div class="event-date-dow">Sat</div>
+              </div>
+              <div class="event-details">
+                <span class="event-tag">Field Trip</span>
+                <h3>River Eco-Tour Adventure</h3>
+                <p class="event-description">Explore Jacksonville's waterways and learn about local ecosystems on this guided boat tour.</p>
+                <p class="event-meta">St. Johns River &bull; 9:00 AM - 12:00 PM</p>
+              </div>
+              <div class="event-actions">
+                <a href="#" class="btn btn-primary btn-sm">Register</a>
+              </div>
+            </div>
+          </article>
+          <article class="event-card">
+            <div class="event-image">
+              <img src="Future leaders pics/20241029_105629.jpg" alt="Kids learning to cut vegetables in cooking class">
+            </div>
+            <div class="event-body">
+              <div class="event-date">
+                <div class="event-date-month">Mar</div>
+                <div class="event-date-day">22</div>
+                <div class="event-date-dow">Sat</div>
+              </div>
+              <div class="event-details">
+                <span class="event-tag">Workshop</span>
+                <h3>Kids in the Kitchen</h3>
+                <p class="event-description">Hands-on cooking workshop where kids learn kitchen safety, basic skills, and make a healthy meal.</p>
+                <p class="event-meta">Community Center &bull; 10:00 AM - 1:00 PM</p>
+              </div>
+              <div class="event-actions">
+                <a href="#" class="btn btn-primary btn-sm">Register</a>
+              </div>
+            </div>
+          </article>
+          <article class="event-card">
+            <div class="event-image">
+              <img src="Future leaders pics/20231208_115725.jpg" alt="Kids enjoying outdoor activities at a park event">
+            </div>
+            <div class="event-body">
+              <div class="event-date">
+                <div class="event-date-month">Mar</div>
+                <div class="event-date-day">29</div>
+                <div class="event-date-dow">Sat</div>
+              </div>
+              <div class="event-details">
+                <span class="event-tag">Social</span>
+                <h3>Spring Family Fun Day</h3>
+                <p class="event-description">Bring your family for games, activities, and connection with our homeschool community.</p>
+                <p class="event-meta">Riverside Park &bull; 11:00 AM - 3:00 PM</p>
+              </div>
+              <div class="event-actions">
+                <a href="#" class="btn btn-primary btn-sm">RSVP</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="section-cta">
+          <a href="#" class="btn btn-secondary">See Full Calendar &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial-section">
+      <div class="container testimonial-inner">
+        <blockquote class="testimonial-quote">
+          Your testimonial here — share how Future Leaders has impacted your family.
+        </blockquote>
+        <p class="testimonial-author">— Future Leaders Family</p>
+        <p class="testimonial-role">Share your story with us</p>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="join">
+      <div class="container">
+        <div class="cta-inner">
+          <h2>Ready to Find Your Village?</h2>
+          <p>Join Future Leaders and give your children enrichment, friendships, and a community that celebrates who they are.</p>
+          <a href="https://band.us/n/aba2A5t6c143I" class="btn btn-accent btn-lg">Join Our Community</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <img src="Future Leaders Logo.png" alt="Future Leaders Black Homeschoolers Community">
+          </a>
+          <p>Empowering Jacksonville's Black homeschool families through enrichment, leadership, and community.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#values">Our Values</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#join">Join</a></li>
+          </ul>
+        </div>
+
+        <!-- Get Involved -->
+        <div>
+          <h4>Get Involved</h4>
+          <ul class="footer-links">
+            <li><a href="#volunteer" id="volunteer">Volunteer</a></li>
+            <li><a href="#donate" id="donate">Donate</a></li>
+            <li><a href="#">Partner With Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p><a href="mailto:futureleadersbhc@gmail.com">futureleadersbhc@gmail.com</a></p>
+          <p>Jacksonville, FL</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2024 Future Leaders Black Homeschoolers Community. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileNav = document.querySelector('.nav-mobile');
+
+    menuToggle.addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      mobileNav.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
+        mobileNav.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close mobile menu when clicking a link
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
